@@ -12,7 +12,11 @@ Scenario:
 A cybersecurity team is investigating an authentication system that occasionally flags legitimate login attempts as 
 suspicious. The system checks multiple conditions to determine if a login attempt should be blocked.
 One of the core checks involves the following rule:
-¬(A∧(B∨¬B))
+¬(A∧(B∨¬B)) == -A
+
+(A∧B) --> True (Not suspicious)
+(A∧B) --> False (Suspicious)
+
 where:
 A: The user has provided the correct login credentials.
 B: The login attempt is from a trusted device.
@@ -26,3 +30,18 @@ Apply Boolean law to simplify it.
 Interpret what the final expression means in the context of allowing or blocking a login attempt.
 
 """
+
+def check_login(A,B):
+  """
+  The function will check for the log in attempts based on given conditions. 
+  Arguments:
+  A: The user has provided the correct login credentials.
+  B: The login attempt is from a trusted device. 
+
+  Returns:
+  True if the log-in attempt is not suspicious. 
+  False if the log-in attempt is suspicious.
+  """
+  return A and B
+
+print(check_login(True, False))

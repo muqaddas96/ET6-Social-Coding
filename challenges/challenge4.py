@@ -6,9 +6,12 @@ Created on Thu Jan 30 15:30:30 2025
 
 Challenge 4: Data Integrity Verification
 Objective:
-In this challenge, you'll apply your knowledge of number systems and logical gates to develop a data verification system ensuring transmission integrity. The task involves using logical operations like XOR to compare transmitted and received data.
+In this challenge, you'll apply your knowledge of number systems and logical gates to develop a data 
+verification system ensuring transmission integrity. The task involves using logical operations like XOR to 
+compare transmitted and received data.
 Scenario:
-A company is transmitting data packets over a network and wants to ensure the data is not altered during transmission. To verify data integrity, the company uses a simple checksum.
+A company is transmitting data packets over a network and wants to ensure the data is not altered during transmission. 
+To verify data integrity, the company uses a simple checksum.
 The data is represented as binary numbers (e.g., "1010101").
 The sender creates a checksum by XORing the data with a secret key.
 The receiver XORs the received data with the same key and compares the result with the checksum:
@@ -32,3 +35,16 @@ Perform the XOR operation directly on integers.
 Optionally convert the result back to binary with bin(), but focus on the XOR operation itself.
 
 """
+def sender_process (sender_data, receiver_data, key):
+
+  sender_data_int = int(sender_data,2)
+  receiver_data_int = int(receiver_data,2)
+  key_int = int(key,2)
+
+  sender_checksum_int = sender_data_int ^ key_int
+  receiver_checksum_int = receiver_data_int ^ key_int
+
+  if sender_checksum_int == receiver_checksum_int:
+    return('Data is valid')
+  else:
+    return('Data is invalid')

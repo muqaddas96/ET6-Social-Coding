@@ -2,6 +2,13 @@
 
 This repository contains starter code and resources for Social Coding workshops covering 1-off fun subjects like generative art, coding competitions, code reading sessions or pseudocoding.
 
+## Team Members
+1. Muhammad Muqaddas Rehman
+2. Nimatallahi Masuud
+3. Zaid Altahhan
+4. Rouaa Hamzah
+5. Samuel Gai
+
 ## Running Python Files in this Repository
 
 - **Running a plain Python script**:
